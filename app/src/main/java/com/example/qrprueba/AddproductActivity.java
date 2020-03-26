@@ -26,6 +26,7 @@ public class AddproductActivity extends AppCompatActivity {
         btnScanear = (Button)findViewById(R.id.btn_scan2);
         btnAtras = (Button)findViewById(R.id.btn_atras);
 
+
         btnScanear.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
