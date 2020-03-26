@@ -23,11 +23,18 @@ public class MainActivity extends AppCompatActivity {
 //textview "resultado" a modo de prueba del barcode Scanner
         resultado = (TextView) findViewById(R.id.resultado);
         btnEscanear = (Button) findViewById(R.id.btn_scan);
+        btnNuevoProd = (Button) findViewById(R.id.btn_nuevoProd);
 
         btnEscanear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),ScannerActivity.class));
+            }
+        });
+        btnNuevoProd.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),AddproductActivity.class));
             }
         });
     }
