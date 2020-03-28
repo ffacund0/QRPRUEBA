@@ -16,6 +16,7 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
 
     ZXingScannerView scannerView;
     private static final int MY_PERMISSIONS_REQUEST = 100;
+    public static String result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
 
     @Override
     public void handleResult(Result result) {
-        MainActivity.resultado.setText("Codigo: "+result.getText());
+        this.result =  result.getText();
         onBackPressed();
     }
 

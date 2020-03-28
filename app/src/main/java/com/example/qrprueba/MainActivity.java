@@ -12,7 +12,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static TextView resultado;
+    public TextView resultado;
     private Button btnNuevoProd;
     private Button btnVerProd;
     private Button btnEscanear;
@@ -22,21 +22,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 //textview "resultado" a modo de prueba del barcode Scanner
         resultado = (TextView) findViewById(R.id.resultado);
-        btnEscanear = (Button) findViewById(R.id.btn_scan);
         btnNuevoProd = (Button) findViewById(R.id.btn_nuevoProd);
+        btnEscanear = (Button) findViewById(R.id.btn_scan);
 
-        btnEscanear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),ScannerActivity.class));
-            }
-        });
         btnNuevoProd.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),AddproductActivity.class));
             }
         });
+        btnEscanear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),ScannerActivity.class));
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        resultado.setText(ScannerActivity.result);
     }
 
 }
