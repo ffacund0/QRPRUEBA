@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     public TextView resultado;
     private Button btnNuevoProd;
     private Button btnVerProd;
-    private Button btnEscanear;
+    private Button btnConsultar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
 //textview "resultado" a modo de prueba del barcode Scanner
         resultado = (TextView) findViewById(R.id.resultado);
         btnNuevoProd = (Button) findViewById(R.id.btn_nuevoProd);
-        btnEscanear = (Button) findViewById(R.id.btn_scan);
+        btnVerProd = (Button) findViewById(R.id.btn_verProd);
+        btnConsultar = (Button) findViewById(R.id.btn_consult);
 
         btnNuevoProd.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -31,10 +32,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),AddproductActivity.class));
             }
         });
-        btnEscanear.setOnClickListener(new View.OnClickListener() {
+        btnVerProd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),ScannerActivity.class));
+                startActivity(new Intent(getApplicationContext(),VerproductActivity.class));
+            }
+        });
+        btnConsultar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),ConsultarActivity.class));
             }
         });
     }
@@ -42,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        resultado.setText(ScannerActivity.result);
     }
 
 }

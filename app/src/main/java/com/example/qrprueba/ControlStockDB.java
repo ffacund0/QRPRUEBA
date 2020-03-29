@@ -10,8 +10,8 @@ import com.example.qrprueba.utilidades.DatosDB;
 
 public class ControlStockDB extends SQLiteOpenHelper {
 
-    public ControlStockDB(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public ControlStockDB(@Nullable Context context) {
+        super(context, "controlstockdb", null, 1);
     }
 
     @Override
@@ -21,7 +21,7 @@ public class ControlStockDB extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("DROP TABLE IF EXIST ARTICULO");
+        db.execSQL("DROP TABLE IF EXISTS ARTICULO");
         onCreate(db);
     }
 }

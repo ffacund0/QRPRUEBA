@@ -16,16 +16,17 @@
         android:text="Nuevo producto" />
 
     <Button
+        android:id="@+id/btn_consult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONSULTAR PRODucto" />
+
+    <Button
         android:id="@+id/btn_verProd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ver productos" />
 
-    <Button
-        android:id="@+id/btn_scan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Escanear" />
     <TextView
         android:id="@+id/resultado"
         android:layout_width="wrap_content"

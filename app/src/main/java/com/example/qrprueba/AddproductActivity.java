@@ -25,6 +25,8 @@ public class AddproductActivity extends AppCompatActivity {
     private Button btnAddProd;
     private Button btnAtras;
 
+    private int flag = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +47,7 @@ public class AddproductActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),ScannerActivity.class));
+                flag = 1;
             }
         });
         btnAddProd.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +65,7 @@ public class AddproductActivity extends AppCompatActivity {
     }
 
     private void registroArticulo() {
-        ControlStockDB conector = new ControlStockDB(this,"controlstockDB",null,1);
+        ControlStockDB conector = new ControlStockDB(this);
         SQLiteDatabase db = conector.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -75,11 +78,13 @@ public class AddproductActivity extends AppCompatActivity {
         Long idResult = db.insert(DatosDB.TABLA_ARTICULO,null,values);
 
         Toast.makeText(getApplicationContext(),"IDrow: "+idResult,Toast.LENGTH_SHORT).show();
+        db.close();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        campoCodigo.setText(ScannerActivity.result);
+        if(flag==1) campoCodigo.setText(ScannerActivity.result);
+        flag = 0;
     }
 }
