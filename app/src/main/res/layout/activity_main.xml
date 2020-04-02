@@ -13,23 +13,36 @@
         android:id="@+id/btn_nuevoProd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nuevo producto" />
+        android:text="registrar repuesto" />
+
+    <Button
+        android:id="@+id/btn_ingreso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingreso" />
+
+    <Button
+        android:id="@+id/btn_salida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="egreso" />
 
     <Button
         android:id="@+id/btn_consult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CONSULTAR PRODucto" />
+        android:text="modifiCAR REPUESTO" />
 
     <Button
         android:id="@+id/btn_verProd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver productos" />
+        android:text="ver repuestos" />
 
-    <TextView
-        android:id="@+id/resultado"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btn_actividad"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Codigo: " />
+        android:text="Actividad reciente" />
+
 </LinearLayout>

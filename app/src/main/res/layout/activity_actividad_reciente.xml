@@ -5,19 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".VerproductActivity">
+    tools:context=".ActividadRecienteActivity">
 
     <Button
-        android:id="@+id/btn_atras2"
+        android:id="@+id/btn_atras4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="atras" />
+        android:text="Atras" />
 
     <ListView
-        android:id="@+id/listaRepuestos"
+        android:id="@+id/list_actividad"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:cacheColorHint="#000000">
+        android:layout_height="match_parent">
 
     </ListView>
 

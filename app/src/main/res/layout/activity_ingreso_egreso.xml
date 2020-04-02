@@ -5,20 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".VerproductActivity">
+    tools:context=".IngresoEgresoActivity">
 
     <Button
-        android:id="@+id/btn_atras2"
-        android:layout_width="match_parent"
+        android:id="@+id/btn_atras3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="atras" />
-
-    <ListView
-        android:id="@+id/listaRepuestos"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:cacheColorHint="#000000">
-
-    </ListView>
+        android:text="Atras" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usar este boton"/>
 
 </LinearLayout>
